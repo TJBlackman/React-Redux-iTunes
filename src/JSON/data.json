@@ -1,0 +1,31 @@
+{
+  "music": {
+    "All": "",
+    "Band / Artist": "artistTerm",
+    "Album title": "albumTerm",
+    "Song Title": "songTerm"
+  },
+  "movies": {
+    "All": "",
+    "Actor / Actress": "artistTerm",
+    "Movie title": "movieTerm",
+    "Year Released": "releaseYearTerm"
+  },
+  "tv shows": {
+    "All": "",
+    "Genre": "genreIndex",
+    "Show Title": "showTerm"
+  },
+  "apps": {
+    "All": "",
+    "Band / Artist": "artistTerm",
+    "Album title": "albumTerm",
+    "Song Title": "songTerm"
+  },
+  "podcasts": {
+    "All": "",
+    "Title": "artistTerm",
+    "Keywords": "keywordsTerm",
+    "Description": "descriptionTerm"
+  }
+}

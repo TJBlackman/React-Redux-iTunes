@@ -1,0 +1,50 @@
+html {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b7deed+0,71ceef+50,21b4e2+51,b7deed+100;Shape+1+Style */
+  background: #b7deed; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-attachment: fixed; 
+}
+
+body { background-color: transparent; }
+
+#root { 
+  background-color: rgba(255,255,255,0.8); 
+  padding: 20px 10px 100px; 
+  margin: 10px auto 30px; 
+}
+
+.audio-button {
+  color: rgba(0,0,0,0.85);
+  transition: all ease-in-out 0.15s; 
+  background-color: transparent; 
+  border: none; 
+  text-align: center; 
+  
+  &:hover,
+  &:active,
+  &:focus {
+    color: #28a745; 
+    cursor: pointer; 
+    outline: 0; 
+  }
+  &.playing:hover {
+      color: #ffc107; 
+  }
+
+  svg {
+    height: 30px; 
+    width: 30px; 
+    fill: currentColor;
+  }
+}
+
+nav .pagination li > a.page-link {
+  background-color: transparent; 
+}
+
+.cursor-hover-pointer:hover {
+  cursor: pointer !important; 
+}

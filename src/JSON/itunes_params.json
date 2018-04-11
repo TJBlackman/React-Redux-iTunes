@@ -1,0 +1,113 @@
+[{
+  "key": "media",
+  "description": "The media type you want to search for. For example: movie. The default is all.",
+  "required": "true",
+  "values": "-1"
+},
+{
+  "key": "country",
+  "description": "Two letter country code for the store you want to search. ISO Country Codes. The default is US.",
+  "required": "true",
+  "values": "-1"
+}, {
+  "key": "media",
+  "description": "The media type you want to search for. For example: movie. The default is all.",
+  "required": "false",
+  "values": ["movie", "podcast", "music", "musicVideo", "audiobook", "shortFilm", "tvShow", "software", "ebook", "all"]
+}, {
+  "key": "entity",
+  "description": "The type of results you want returned, relative to the specified media type. For example: movieArtist for a movie media type search. The default is the track entity associated with the specified media type.",
+  "required": "false",
+  "values": [{
+      "media": "movie",
+      "values": ["movieArtist", "movie"]
+    },
+    {
+      "media": "podcast",
+      "values": ["podcastAuthor", "podcast"]
+    },
+    {
+      "media": "music",
+      "values": ["musicArtist", "musicTrack", "album", "musicVideo", "mix", "song"]
+    },
+    {
+      "media": "musicVideo",
+      "values": ["musicArtist", "musicVideo"]
+    },
+    {
+      "media": "audiobook",
+      "values": ["audiobookAuthor", "audiobook"]
+    },
+    {
+      "media": "shortFilm",
+      "values": ["shortFilmArtist", "shortFilm"]
+    },
+    {
+      "media": "tvShow",
+      "values": ["tvEpisode", "tvSeason"]
+    },
+    {
+      "media": "software",
+      "values": ["software", "iPadSoftware", "macSoftware"]
+    },
+    {
+      "media": "ebook",
+      "values": ["ebook"]
+    },
+    {
+      "media": "all",
+      "values": ["movie", "album", "allArtist", "podcast", "musicVideo", "mix", "audiobook", "tvSeason", "allTrack"]
+    }
+  ]
+}, {
+  "key": "attribute",
+  "description": "The attribute you want to search for in the stores, relative to the specified media type. For example, if you want to search for an artist by name specify entity=allArtist&attribute=allArtistTerm. In this example, if you search for term=maroon, iTunes returns “Maroon 5” in the search results, instead of all artists who have ever recorded a song with the word “maroon” in the title.",
+  "required": "false",
+  "values": [{
+    "media": "movie",
+    "values": ["actorTerm", " genreIndex", " artistTerm", " shortFilmTerm", " producerTerm", " ratingTerm", " directorTerm", " releaseYearTerm", " featureFilmTerm", " movieArtistTerm", " movieTerm", " ratingIndex", " descriptionTerm"]
+  }, {
+    "media": "podcast",
+    "values": ["titleTerm", " languageTerm", " authorTerm", " genreIndex", " artistTerm", " ratingIndex", " keywordsTerm", " descriptionTerm"]
+  }, {
+    "media": "music",
+    "values": ["mixTerm", " genreIndex", " artistTerm", " composerTerm", " albumTerm", " ratingIndex", " songTerm"]
+  }, {
+    "media": "musicVideo",
+    "values": ["genreIndex", " artistTerm", " albumTerm", " ratingIndex", " songTerm"]
+  }, {
+    "media": "audiobook",
+    "values": ["titleTerm", " authorTerm", " genreIndex", " ratingIndex"]
+  }, {
+    "media": "shortFilm",
+    "values": ["genreIndex", " artistTerm", " shortFilmTerm", " ratingIndex", " descriptionTerm"]
+  }, {
+    "media": "software",
+    "values": ["softwareDeveloper"]
+  }, {
+    "media": "tvShow",
+    "values": ["genreIndex", " tvEpisodeTerm", " showTerm", " tvSeasonTerm", " ratingIndex", " descriptionTerm"]
+  }, {
+    "media": "all",
+    "values": ["actorTerm", " languageTerm", " allArtistTerm", " tvEpisodeTerm", " shortFilmTerm", " directorTerm", " releaseYearTerm", " titleTerm", " featureFilmTerm", " ratingIndex", " keywordsTerm", " descriptionTerm", " authorTerm", " genreIndex", " mixTerm", " allTrackTerm", " artistTerm", " composerTerm", " tvSeasonTerm", " producerTerm", " ratingTerm", " songTerm", " movieArtistTerm", " showTerm", " movieTerm", " albumTerm"]
+  }]
+}, {
+  "key": "limit",
+  "description": "The number of search results you want the iTunes Store to return. For example: 25.The default is 50.",
+  "required": "no",
+  "values": {
+    "min": 1,
+    "max": 200
+  }
+}, {
+  "key": "lang",
+  "description": "The language, English or Japanese, you want to use when returning search results. Specify the language using the five-letter codename. For example: en_us.The default is en_us (English).",
+  "required": "false",
+  "values": ["en_us", "ja_jp"]
+}, {
+  "key": "explicit",
+  "description": "A flag indicating whether or not you want to include explicit content in your search results.The default is Yes.",
+  "required": "false",
+  "values": ["yes", "no"]
+}
+]

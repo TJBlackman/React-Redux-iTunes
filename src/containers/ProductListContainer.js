@@ -21,7 +21,7 @@ class ProductListContainer extends Component {
     
     return (
       <div>
-        <ProductTable products={this.show_pagenated_products()} />
+        <ProductTable products={this.show_pagenated_products()} mediaType={this.props.state.active_media_type} />
       </div>
     )
   }

@@ -4,7 +4,6 @@ import ProductListItem from './ProductListItem';
 export default function ProductTable(props) {
   return (
     <div>
-      {/* <Pagination data={this.pagination_props()} /> */}
       <table className="table table-hover">
         <thead>
           <tr>
@@ -18,7 +17,7 @@ export default function ProductTable(props) {
         <tbody>
           { 
             props.products.map(item => {
-              return <ProductListItem data={item} key={item.trackId}/>
+              return <ProductListItem data={item} key={item.trackId} mediaType={props.mediaType}/>
             }) 
           }
         </tbody>

@@ -45,3 +45,11 @@ export const DECREMENT_PAGE_NUMBER = '[user] DECREMENT_PAGE_NUMBER';
 export function decrement_page_number_action(){
   return { type: DECREMENT_PAGE_NUMBER }; 
 }
+
+export const WATCH_VIDEO_PREVIEW = '[user] CLICK_VIDEO_PREVIEW_BTN';
+export function watch_video_preview_action(videoSrc){
+  return { 
+    type: WATCH_VIDEO_PREVIEW,
+    payload: videoSrc
+  }
+}

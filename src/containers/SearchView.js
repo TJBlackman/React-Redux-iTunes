@@ -9,6 +9,7 @@ import SearchFormContainer from '../containers/FormContainer';
 import Pagination from '../components/Pagination';
 import SearchHistory from '../components/SearchHistory';
 import Loader from '../components/Loader';
+import Modal from '../components/Modal';
 
 import {increment_page_number_action, decrement_page_number_action, history_item_cliked_action} from '../redux/actions/user_actions';
 
@@ -64,6 +65,10 @@ class SearchView extends React.Component {
             <SearchHistory history={this.getCurrentHistory()} handleClick={this.props.history_item_cliked_action} />
           </div>
         </div>
+        {
+          this.props.state.modal_is_showing && 
+            <Modal video={this.props.state.video_preview_url} />
+        }
       </div>
     )
   }

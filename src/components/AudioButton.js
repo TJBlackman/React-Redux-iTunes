@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class AudioButton extends Component {
   constructor(props){
     super(props);
-    this.state = {playing: false}
+    this.state = { playing: false }
   }
 
   togglePlaying = () => {
@@ -23,14 +23,14 @@ export default class AudioButton extends Component {
 
     return (
       <div>
-          <button 
-            className={class_name}
-            type="button"
-            onClick={this.togglePlaying}
-          >
-            {icon}
-          </button>
-          <audio src={this.props.audio} ref="audio" onEnded={this.togglePlaying}/>
+        <button 
+          className={class_name}
+          type="button"
+          onClick={this.togglePlaying}
+        >
+          {icon}
+        </button>
+        <audio src={this.props.audio} ref="audio" onEnded={this.togglePlaying}/>
       </div>
     )
   }
